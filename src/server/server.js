@@ -8,14 +8,14 @@ const app = express();
 if (process.env.NODE_ENV === 'development') {
   app.use(cors({
     origin: (origin, callback) => {
-      if (origin === 'http://localhost:8080') {
+      if (origin === 'http://localhost:8080' || !origin) {
         callback(null, true)
       }else{
         callback(new Error('CORS Error'))
       }
     }
   }));
-};
+}
 
 app.use(express.static(path.join('./', 'dist')));
 
