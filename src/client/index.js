@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Hello } from './hello'
 
-fetch('http://localhost:3000/api').then(response => {
+fetch('/api').then(response => {
   console.log(response);
 })
 
