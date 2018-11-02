@@ -1,2 +1,25 @@
 server:
   port: 8080
+
+log:
+  appenders:
+    console:
+      type: console
+      category: system
+    file:
+      type: dateFile
+      filename: logs/system.log
+      pattern: "-yyyy-MM-dd"
+      alwaysIncludePattern: false
+      category: system
+  categories:
+    default:
+      appenders:
+      - console
+      - file
+      level: info
+    error:
+      appenders:
+      - console
+      - file
+      level: error
