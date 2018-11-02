@@ -8,7 +8,7 @@
     "precommit": "lint-staged",
     "lint": "eslint src --fix -c .eslintrc.json 'src/**/*.js'",
     "server": "nodemon src/server/server.js  --exec babel-node",
-    "client": "webpack-dev-server --config ./config/webpack.config.js --mode development --open",
+    "client": "webpack-dev-server --config ./config/webpack.config.dev.js",
     "build": "webpack --config ./config/webpack.config.js --mode production",
     "dev": "NODE_ENV=development concurrently \"npm run client\" \"npm run server\"",
     "start": "NODE_ENV=production npm run build && npm run server"
@@ -37,10 +37,14 @@
     "nodemon": "^1.18.5",
     "prettier": "^1.14.3",
     "prettier-eslint-cli": "^4.7.1",
+    "react-hot-loader": "^4.3.12",
     "style-loader": "^0.23.1",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-hot-middleware": "^2.24.3",
+    "webpack-merge": "^4.1.4"
   },
   "pre-commit": [
     "lint-staged"

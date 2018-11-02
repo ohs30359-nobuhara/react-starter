@@ -6,13 +6,13 @@ const app = express();
 app.use(express.static(path.join('./', 'dist')));
 
 app.get('/api', (req, res) => {
-  res.send('call api');
+  res.send({data: 'test'});
 })
 
 app.get('*', function (req, res) {
   res.sendFile(path.join('./', 'dist', 'index.html'))
 })
 
-app.listen(3000, ()=> {
-  console.log('server running');
+app.listen(8080, ()=> {
+  console.log('server running port 8080');
 })
