@@ -7,7 +7,7 @@ const app = express();
 
 const serverConfig = config.get('server');
 
-app.use(express.static(path.join('./', 'dist')));
+app.use(express.static(path.resolve('./', 'dist')));
 
 app.get('/api', (req, res) => {
   logger.info(`access from ${req.headers.host}`);
@@ -15,7 +15,7 @@ app.get('/api', (req, res) => {
 })
 
 app.get('*', function (req, res) {
-  res.sendFile(path.join('./', 'dist', 'index.html'))
+  res.sendFile(path.resolve('./', 'dist', 'index.html'))
 })
 
 app.listen(serverConfig.port, ()=> {
