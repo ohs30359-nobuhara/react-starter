@@ -39,7 +39,7 @@
     "husky": "^1.1.2",
     "jsdom": "^13.0.0",
     "lint-staged": "^7.3.0",
-    "mocha": "^5.2.0",
+    "mocha": "^10.2.0",
     "nodemon": "^1.18.5",
     "prettier": "^1.14.3",
     "prettier-eslint-cli": "^4.7.1",
